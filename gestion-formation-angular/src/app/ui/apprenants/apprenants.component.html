@@ -1,0 +1,39 @@
+<div class="apprenants-container">
+  <h2>Liste des Apprenants</h2>
+
+  <div class="add-apprenant-container">
+    <button (click)="onAdd()" class="add-btn">
+      <span class="icon">+</span> Ajouter un Apprenant
+    </button>
+  </div>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Email</th>
+      <th>Rôle</th>
+      <th>Niveau</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let apprenant of apprenants">
+      <td>{{ apprenant.id }}</td>
+      <td>{{ apprenant.nom }}</td>
+      <td>{{ apprenant.prenom }}</td>
+      <td>{{ apprenant.email }}</td>
+      <td>{{ apprenant.role }}</td>
+      <td>{{ apprenant.niveau }}</td>
+      <td>
+        <button class="details-btn" *ngIf="apprenant.id !== undefined" (click)="onDetail(apprenant.id)">ℹ️ Détails</button> |
+        <button class="edit-btn" *ngIf="apprenant.id !== undefined" (click)="onEdit(apprenant.id)">✏ Modifier</button> |
+        <button class="delete-btn" *ngIf="apprenant.id !== undefined" (click)="onDelete(apprenant.id)">🗑️ Supprimer</button>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

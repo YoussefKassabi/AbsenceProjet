@@ -1,0 +1,51 @@
+<!--<h1>Bienvenue dans la plateforme de Gestion des Formations</h1>
+
+<p>Cette plateforme vous permet de gérer efficacement les utilisateurs, les formations, le suivi des absences et la progression des apprenants.</p>
+
+<nav>
+  <button routerLink="/utilisateurs">Gérer les Utilisateurs</button>
+  <button routerLink="/apprenants">Gérer les Apprenants</button>
+  <button routerLink="/absences">Suivi des Absences</button>
+</nav>
+
+<router-outlet></router-outlet>  ✅ Doit être présent ici -->
+<!-- Barre de navigation -->
+<nav class="navbar">
+  <div class="container">
+    <h1 class="brand">Gestion des Formations</h1>
+    <div class="navbar-buttons">
+      <div class="dropdown">
+        <a routerLink="/utilisateurs"><button class="nav-btn">Utilisateurs</button></a>
+        <div class="dropdown-content">
+          <a routerLink="/apprenants">Apprenants</a>
+        </div>
+      </div>
+      <a routerLink="/formations"><button class="nav-btn">Formations</button></a>
+      <a routerLink="/absences"><button class="nav-btn">Absences</button></a>
+      <a routerLink="/progression"><button class="nav-btn">Progression</button></a>
+      <a routerLink="/rapports"><button class="nav-btn">Rapports</button></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenu de la page d'accueil
+<div class="home-container" *ngIf="showHomeSection">
+  <h2>Bienvenue dans la plateforme de Gestion des Formations</h2>
+  <p>
+    Cette plateforme vous permet de gérer efficacement les utilisateurs, les formations,
+    le suivi des absences et la progression des apprenants.
+  </p>
+
+  <div class="button-container">
+    <a routerLink="/utilisateurs"><button class="big-btn">Gérer les Utilisateurs</button></a>
+    <a routerLink="/formations"><button class="big-btn">Gérer les Formations</button></a>
+    <a routerLink="/absences"><button class="big-btn">Suivi des Absences</button></a>
+    <a routerLink="/progression"><button class="big-btn">Suivi des Progressions</button></a>
+    <a routerLink="/rapports"><button class="big-btn">Générer des Rapports</button></a>
+  </div>
+</div>-->
+
+<!-- Affichage des routes -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

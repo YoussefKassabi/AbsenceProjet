@@ -1,0 +1,27 @@
+<h2>Liste des absences</h2>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Apprenant</th>
+    <th>Date</th>
+    <th>Type</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let absence of absences" [ngStyle]="{ 'background-color': absence.type === 'Ab' ? 'red' : (absence.type === 'Ret' ? 'yellow' : 'white') }">
+    <td>{{ absence.id }}</td>
+    <td>{{ absence.apprenant }}</td>
+    <td>{{ absence.date }}</td>
+    <td>
+      <span *ngIf="absence.type === 'Ab'">❌ Absent</span>
+      <span *ngIf="absence.type === 'Ret'">⏳ Retard</span>
+    </td>
+    <td>
+      <button (click)="deleteAbsence(absence.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

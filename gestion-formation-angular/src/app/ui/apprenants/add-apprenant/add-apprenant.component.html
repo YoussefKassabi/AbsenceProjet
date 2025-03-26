@@ -1,0 +1,36 @@
+<div class="add-apprenant-container">
+  <h2>Ajouter un Apprenant</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nom">Nom:</label>
+      <input id="nom" [(ngModel)]="apprenant.nom" name="nom" required />
+    </div>
+    <div>
+      <label for="prenom">Prénom:</label>
+      <input id="prenom" [(ngModel)]="apprenant.prenom" name="prenom" required />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="apprenant.email" name="email" type="email" required />
+    </div>
+    <div>
+      <label for="role">Rôle:</label>
+      <select id="role" [(ngModel)]="apprenant.role" name="role" required>
+        <option value="" disabled selected>-- Sélectionner un rôle --</option>
+        <option value="Étudiant">Étudiant</option>
+        <option value="Formateur">Formateur</option>
+      </select>
+    </div>
+    <div>
+      <label for="niveau">Niveau:</label>
+      <select id="niveau" [(ngModel)]="apprenant.niveau" name="niveau" required>
+        <option value="" disabled selected>-- Sélectionner un niveau --</option>
+        <option value="Débutant">Débutant</option>
+        <option value="Intermédiaire">Intermédiaire</option>
+        <option value="Avancé">Avancé</option>
+      </select>
+    </div>
+    <button type="submit">Ajouter</button>
+    <button type="button" (click)="onCancel()">Annuler</button>
+  </form>
+</div>

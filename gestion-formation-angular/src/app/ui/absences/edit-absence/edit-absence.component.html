@@ -1,0 +1,18 @@
+<h2>Modifier une absence</h2>
+
+<form (ngSubmit)="updateAbsence()">
+  <label for="apprenantId">ID Apprenant :</label>
+  <input type="number" id="apprenantId" [(ngModel)]="absence.apprenantId" name="apprenantId" required>
+
+  <label for="dateAbsence">Date :</label>
+  <input type="date" id="dateAbsence" [(ngModel)]="absence.dateAbsence" name="dateAbsence" required>
+
+  <label for="typeAbsence">Type :</label>
+  <select id="typeAbsence" [(ngModel)]="absence.typeAbsence" name="typeAbsence" required>
+    <option value="Maladie">Maladie</option>
+    <option value="Justifiée">Justifiée</option>
+    <option value="Non justifiée">Non justifiée</option>
+  </select>
+
+  <button type="submit">Mettre à jour</button>
+</form>

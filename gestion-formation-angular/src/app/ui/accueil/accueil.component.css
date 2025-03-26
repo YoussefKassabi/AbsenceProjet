@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: #6a1b9a;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #8e24aa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6a1b9a;
+}

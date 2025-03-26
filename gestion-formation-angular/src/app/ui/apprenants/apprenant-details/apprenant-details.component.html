@@ -1,0 +1,21 @@
+<div class="details-container">
+  <div class="details-card">
+    <h2>Détails de l'Apprenant</h2>
+    <div *ngIf="apprenant; else noData" class="details-content">
+      <p><strong>Nom :</strong> {{ apprenant.nom }}</p>
+      <p><strong>Prénom :</strong> {{ apprenant.prenom }}</p>
+      <p><strong>Email :</strong> {{ apprenant.email }}</p>
+      <p><strong>Rôle :</strong> {{ apprenant.role }}</p>
+      <p><strong>Niveau :</strong> {{ apprenant.niveau }}</p>
+    </div>
+    <div class="buttons">
+      <button class="edit-btn" (click)="onEdit()">✏ Modifier</button>
+      <button class="back-btn" (click)="onBack()">↩️ Retour</button>
+    </div>
+  </div>
+</div>
+
+<!-- Template si aucun apprenant n'est trouvé -->
+<ng-template #noData>
+  <p class="no-data">Aucun apprenant trouvé.</p>
+</ng-template>

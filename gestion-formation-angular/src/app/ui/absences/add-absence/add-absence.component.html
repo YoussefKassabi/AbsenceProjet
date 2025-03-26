@@ -1,0 +1,16 @@
+<h2>Ajouter une Absence</h2>
+<form (ngSubmit)="addAbsence()">
+  <label>Apprenant ID :</label>
+  <input type="number" [(ngModel)]="absence.apprenantId" name="apprenantId" required>
+
+  <label>Date :</label>
+  <input type="date" [(ngModel)]="absence.dateAbsence" name="dateAbsence" required>
+
+  <label>Type :</label>
+  <select [(ngModel)]="absence.typeAbsence" name="typeAbsence">
+    <option value="Ab">Absence</option>
+    <option value="Ret">Retard</option>
+  </select>
+
+  <button type="submit">Ajouter</button>
+</form>

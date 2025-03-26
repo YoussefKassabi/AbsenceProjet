@@ -1,0 +1,34 @@
+<div class="edit-container">
+  <div class="edit-card">
+    <h2>Modifier l'Apprenant</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" [(ngModel)]="apprenant.nom" name="nom" required>
+
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" [(ngModel)]="apprenant.prenom" name="prenom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" [(ngModel)]="apprenant.email" name="email" required>
+
+      <label for="role">Rôle :</label>
+      <select id="role" [(ngModel)]="apprenant.role" name="role">
+        <option>Étudiant</option>
+        <option>Enseignant</option>
+        <option>Administrateur</option>
+      </select>
+
+      <label for="niveau">Niveau :</label>
+      <select id="niveau" [(ngModel)]="apprenant.niveau" name="niveau">
+        <option>Débutant</option>
+        <option>Intermédiaire</option>
+        <option>Avancé</option>
+      </select>
+
+      <div class="buttons">
+        <button type="submit" class="save-btn">💾 Enregistrer</button>
+        <button type="button" class="cancel-btn" (click)="onCancel()">❌ Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
