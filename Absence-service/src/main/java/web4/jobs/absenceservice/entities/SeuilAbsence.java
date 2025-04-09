@@ -3,22 +3,24 @@ package web4.jobs.absenceservice.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDate;
 
 @Entity
 @Getter
 @Setter
-
-    public class Absence {
+public class SeuilAbsence {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long apprenantId; // ou relation @ManyToOne avec Apprenant
+    @Column(nullable = false, unique = true)
     private String codeFormation;
-    private LocalDate dateAbsence;
-    private String type; // "AB" ou "RET"
 
-    // getters & setters
+    @Column(nullable = false)
+    private Integer seuilAbsence;
+
+    @Column(nullable = false)
+    private Integer seuilRetard;
+
+    public SeuilAbsence() {}
 }
